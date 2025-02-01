@@ -154,8 +154,20 @@ def envio_email(nome_usuario, email_usuario, result):
         st.error(f"❌ Erro ao enviar e-mail: {e}")
 
 # Interface Streamlit
+st.set_page_config(
+    page_title="CORRIGE.AI",
+    page_icon="📃",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+    }
+)
+
+
 st.title("📑 Avaliador de Redação do ENEM")
-modelo_llm = st.sidebar.radio("Escolha o LLM:", ["GPT 3.5 Turbo", "GPT 4o 2024", "LLAMA 3.3 70B"])
+with st.sidebar:
+    st.image(r'imagens/logov2.png')
+    modelo_llm = st.sidebar.radio("Escolha o LLM:", ["GPT 3.5 Turbo", "GPT 4o 2024", "LLAMA 3.3 70B"])
 nome_usuario = st.text_input("Nome:")
 email_usuario = st.text_input("E-mail:")
 uploaded = st.file_uploader("Carregue sua redação (PDF ou Word)", type=["pdf", "docx"])
@@ -172,10 +184,11 @@ if st.button("📊 Gerar Análise"):
         resultado = gerar_analise(texto_redacao, nome_usuario, modelo_llm)
         st.subheader("📌 Relatório de Avaliação")
         st.markdown(resultado, unsafe_allow_html=True)
+        envio_email(nome_usuario, email_usuario, resultado)
 
-# pontos de melhoria e-mail:
-#       
-# if st.button("📧 Enviar para o E-mail"):
-#     envio_email(nome_usuario, email_usuario, resultado)
+
+      
+
+
 
 
