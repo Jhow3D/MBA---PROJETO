@@ -172,7 +172,7 @@ st.set_page_config(
 
 st.title("📑 Avaliador de Redação do ENEM")
 with st.sidebar:
-    st.image(r'imagens/logov2.png')
+    #st.image(r'imagens/logov2.png')
     modelo_llm = st.sidebar.radio("Escolha o LLM:", ["GPT 3.5 Turbo", "GPT 4o 2024", "LLAMA 3.3 70B"])
 nome_usuario = st.text_input("Nome:")
 email_usuario = st.text_input("E-mail:")
