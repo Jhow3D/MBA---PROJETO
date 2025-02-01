@@ -8,7 +8,7 @@
 - Washington França;
 - Wiliams Alves.
 
-link: (https://corrigeai.streamlit.app/).
+# link da aplicação: (https://corrigeai.streamlit.app/).
 
 ![image](./imagens/img-avaliador.png)
 
