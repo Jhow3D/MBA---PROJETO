@@ -28,7 +28,7 @@ A IA atribui notas de 0 a 200 para cada competência e gera uma nota final de 0 
 
 ## 🛠 Tecnologias Usadas
 - **Linguagem de Programação:** Python
-- **Framework para Interface:** Streamlit
+- **Framework para Interface e AI:** Streamlit e Langchain
 - **Modelos de Linguagem:** OpenAI (GPT-3.5 Turbo, GPT-4o), Groq (LLaMA 3.3 70B)
 - **Processamento de Arquivos:** PyMuPDF (fitz) e python-docx
 - **Envio de E-mail:** smtplib, ssl, email.message
