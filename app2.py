@@ -13,6 +13,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+groq_api_key = st.secrets["GROQ_API_KEY"]
+huggingface_token = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
+email_sender = st.secrets["EMAIL_SENDER"]
+email_password = st.secrets["EMAIL_PASSWORD"]
+
 TEMPLATE_PROMPT = """Você será responsável por avaliar essa redação: {redacao} do aluno {nome_usuario} com base nos critérios do Exame Nacional do Ensino Médio (ENEM). A redação será avaliada em cinco competências, cada uma com pontuação de 0 a 200 pontos, totalizando uma nota final de 0 a 1000. Siga as orientações abaixo para atribuir a nota em cada competência:
 
 Competência I: Domínio da Modalidade Escrita Formal da Língua Portuguesa
@@ -166,7 +172,7 @@ st.set_page_config(
 
 st.title("📑 Avaliador de Redação do ENEM")
 with st.sidebar:
-    st.image(r'logov2.png')
+    st.image(r'imagens/logov2.png')
     modelo_llm = st.sidebar.radio("Escolha o LLM:", ["GPT 3.5 Turbo", "GPT 4o 2024", "LLAMA 3.3 70B"])
 nome_usuario = st.text_input("Nome:")
 email_usuario = st.text_input("E-mail:")
