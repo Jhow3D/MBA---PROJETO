@@ -49,5 +49,4 @@ A IA atribui notas de 0 a 200 para cada competência e gera uma nota final de 0 
 1. **Otimização do processamento da redação:** Melhorar a precisão na extração de textos de arquivos PDF e Word.
 2. **Aprimoramento do feedback:** Tornar as sugestões mais detalhadas e alinhadas com o perfil do aluno.
 3. **Interface aprimorada:** Tornar o sistema mais intuitivo e interativo.
-4. **Melhoria no envio de e-mails:** Adicionar suporte para servidores de e-mail alternativos e personalização do relatório enviado.
-5. **Treinamento de modelos próprios:** Criar um modelo ajustado para correção de redações com base em redações do ENEM.
+4. **Treinamento de modelos próprios:** Criar um modelo ajustado para correção de redações com base em redações do ENEM.
