@@ -1,0 +1,2 @@
+### Código para implementações futuras
+---
